@@ -1,0 +1,13 @@
+div{
+    height: 100px;
+}
+
+
+
+.red {color: red; background-color: red; width: 50px; }
+.orange{color: orange; background-color: orange ;width: 100px; }
+.yellow{color: yellow; background-color: yellow;width: 150px;}
+.green{color: green; background-color: green;width: 200px;}
+.blue{color: blue; background-color: blue ;width: 250px; }
+.navy{color: navy; background-color: navy ;width: 300px; }
+.purple{color: purple; background-color: purple; width: 350px;}
