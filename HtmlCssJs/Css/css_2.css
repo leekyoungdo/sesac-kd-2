@@ -1,0 +1,109 @@
+.div-hover:hover {
+    background-color: red;
+}
+
+.div-active:active{
+    background-color: blue; color: white;
+}
+
+.input-focus:focus{
+    background-color: orange;
+}
+
+a:visited{
+    color: red;
+}
+
+.fruits span:first-child{
+    color: red;
+}
+
+/* 프룻츠 하위 요소중 첫번쨰 자식이 span 이면~~ */
+
+
+.fruits h3:last-child{
+    color: red;
+}
+
+/* 프룻츠 하위 요소중 마지막 자식이 h3 라면~~ */
+
+
+.fruits span:nth-child(2){
+    color: blue;
+}
+
+/* 프룻추 하위 요소중 n번째 자식이 span 이면~ */
+
+
+.fruits span:nth-child(2){
+    color: blue;
+}
+
+.fruits2 span:nth-child(2n+1){
+    color: blue;
+}
+
+/* n은 0부터 시작 홀수 짝수단위로 지정가능 
+2n+1 홀수  2n 짝수*/
+
+
+.fruits2 span:not(.wm){
+    background-color: aqua;
+}
+
+.fruits *:not(span){
+    background-color: aqua;
+}
+
+
+
+
+/* ::befored에 대하여 */
+
+div.before-el::before{
+    content: "front!" ;
+}
+
+div.after-el::after{
+    border-radius: 2px;
+    font-size: 12px;
+    color: white;
+    background-color: red;
+    content: "hot!";
+}
+
+div.box::after{
+    content: "빨리";
+}
+
+
+div.box::before{
+    content: "택시";
+}
+
+
+input[name=name] {
+    background-color: orange;
+}
+
+
+
+
+.fruits3 > .wm-3{
+    color: blue;
+}
+
+.wm-3{
+    color: red;
+}
+
+
+input[disabled]{
+    background-color: red;
+}
+input[placeholder=이름]{
+    background-color: orange;
+}
+input:not([placeholder]){
+    background-color: blue;
+}
