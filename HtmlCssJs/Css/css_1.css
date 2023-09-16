@@ -1,0 +1,63 @@
+/* *{
+    color: red;
+    
+
+
+} */
+/* *는 전체선택자 */
+/* div{
+    background-color: aqua;
+} */
+
+
+/* 태그 선택자 */
+.orange{
+    color: orange;
+}
+/* class 선택자는 .을 달고나온다 */
+
+
+.bg-red{
+    background-color: red;
+}
+/* - 으로 연결 */
+
+
+#red{
+
+    color: red;
+}
+/* id 선택자는 #을 달고나온다 */
+
+
+
+/* div .apple{
+    color: brown;
+} */
+
+/* 하위선택자 */
+
+
+
+
+/* div > .apple{
+        color: brown;
+} */
+
+/* 자식선택자 */
+
+
+
+
+/* h1 ~ ul {
+    color: blue;
+    font-size: 20px;
+}
+인접형제 선택자 */
+
+
+/* h1 + ul {
+    color: blue;
+    font-size: 20px;
+}
+일반형제 선택자 */
