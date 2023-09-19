@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+}
+.container{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+}
+
+
+
+.item-1{
+    position: relative;
+    top: 30px;
+    left: 50px;
+    background-color: red;
+}
+
+.item-2{
+    position: absolute;
+    right: 30px;
+    bottom: 100px;
+    background-color: orange;
+
+}
+
+.item-3{
+    position: fixed;
+    right: 100px;
+    top: 100px;
+    background-color: blue;
+
+}
+
+.parent{
+    position: relative;
+}
+
+.on{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.un{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+
+}
+
+.an{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+
+}
+
+.pull{
+    z-index: 5;
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    top: 100px;
+}
+
+.circle-1{
+    z-index: 1;
+    background-color: red;
+    
+}
+
+.circle-2{
+    z-index: 2;
+    background-color: red;
+    top: 30px;
+    left: 60px;
+}
+
+.circle-3{
+    z-index: 3;
+    background-color: red;
+    top: 60px;
+    left: 100px;
+}
+
+.circle-4{
+    z-index: 4;
+    background-color: red;
+    top: 70px;
+    left: 180px;
+}
+
+.circle-5{
+    z-index: 6;
+    background-color: red;
+    top: 80px;
+    left: 240px;    
+}
+
+.minicc-1{
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.minicc-2{
+    background-color: red;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+}
