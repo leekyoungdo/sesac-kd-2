@@ -1,0 +1,81 @@
+/* relative */
+body{
+    margin: 0;
+}
+.box{
+    /* static 기본값 */
+    /* position: static; */
+    width: 100px;
+    height: 100px;
+}
+.sm-box{
+    width: 50px;
+    height: 50px;
+}
+
+.box-red{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: red;
+}
+
+.box-orange{
+    /* left right / top bottom 둘 중 하나만 사용 */
+    /* 반대로이동 top = 아래로  음수를 쓰면 정상적으로 이동 */
+    position: relative;
+    top: 20px;
+    /* left: 20px; */
+    /* bottom: 20px; */
+    right: 20px;
+    background-color: orange
+}
+
+.box-yellow{
+    position: absolute;
+    background-color: yellow;
+}
+
+.box-green{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: green;
+}
+
+.fixed{
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: blue
+}
+
+.container{
+    position: relative;
+    height: 200px;
+    background-color: blue;
+}
+
+
+.item{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.red {
+    top: 20px;
+    background-color: red;
+}
+
+.orange{
+    top: 20px;
+    background-color: orange;
+}
+
+.yellow{
+    top: 40px;
+    left: 40px;
+    background-color: yellow;
+}
