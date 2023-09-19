@@ -1,0 +1,23 @@
+
+.box{
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 100px;
+}
+
+.box:active {
+    width: 300px;
+    height: 300px;
+    transition: 1s 0.5s;
+}
+
+
+.img{
+    width: 400px;
+    height: 400px;
+}
+
+.transform-1{
+    transform: skew(10deg, 10deg);
+}
