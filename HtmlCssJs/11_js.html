@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+    <script>
+        // // if, else if, else 모두 사용한 경우
+        // if (조건1) {
+        //     // 조건1이 true(참)일 때 실행할 코드
+        // } else if(조건2) {
+        //     // 조건1은 false(거짓)이고, 
+        //     // 조건2가 true(참)일 때 실행할 코드
+        // } else {
+        //     // 위에 나온 조건들이 모두 거짓일 때 실행할 코드
+        // }
+
+        // // if, else 사용한 경우
+        // if (조건1) {
+        //     // 조건1이 true(참)일 때 실행할 코드
+        // } else {
+        //     // 위에 나온 조건들이 모두 거짓일 때 실행할 코드
+        // }
+
+        // // if만 사용한 경우
+        // if (조건1) {
+        //     // 조건1이 true(참)일 때 실행할 코드
+        // } 
+        
+        let name = "me"
+        if (name === "lee") {
+            console.log("lee 야 안녕?")    
+        }
+        else if (name === "park") {
+            console.log("park 이야?")
+        }
+        else{
+            console.log("누구야?")
+        }
+        //if는 별개
+
+    </script>
+
+    <script>
+        let number = 5;
+        if (number < 4) {
+            console.log("d");
+            if (numver > 7) {
+                console.log
+            }
+        }
+
+        number = "d";
+        switch (number) {
+            case "a":
+                console.log("1");
+                break;
+            case "b":
+                console.log("2");
+                break;
+            case "c":
+                console.log("3");
+                break;
+            default:
+                console.log("모르겟어요ㅠ")
+                break;
+        }
+        let sung = "lee"
+        // 조건 ? 참일 때 실행할 코드 : 거짓일때 실행할 코드
+        sung == "lee"? console.log("안녕하세요") : console.log("누구세요?")
+        
+        let msg = sung == "lee" ? "안녕하세요" : "누구세요?"
+        console.log(msg)
+
+</body>
+</html>
