@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    
+    <div id = "box" class="box" > hello</div>
+    <div id = "container" class="box item"> hello</div>
+    <span>hello span</span>
+
+    <input type="text" name="email">
+
+    <div id="box2">
+        <b>hello</b> box2
+    </div>
+
+
+    <div id = "box3">hi lee</div>
+
+    <script>
+        // let elById = document.getElementById("box")
+        // console.log(elById)
+
+        // let elByClass = document.getElementsByClassName("box")
+        // console.log(elByClass)
+        // console.log(elByClass[0])
+        // console.log(elByClass[1])
+
+        // let elByTag = document.getElementsByTagName("span")
+        // console.log(elByTag)
+
+        // let elByName = document.getElementsByName("email")
+        // console.log(elByName)
+        
+        // //선택자를 이용하여 요소를 선택
+        // let elBySelector = document.querySelector(".box")
+        // let elBySelectorAll = document.querySelectorAll(".box")
+
+        // console.log(elBySelector)
+        // console.log(elBySelectorAll)
+
+        // let elBox2 = document.getElementById("box2")
+        // console.log(elBox2)
+        // console.log(elBox2.innerText)
+        // console.log(elBox2.innerHTML)
+
+        // elBox2.innerText = "hello <b>lee</b>"
+        // elBox2.innerHTML = "hello <b>lee</b>"
+
+
+        let elBox3 = document.querySelector("#box3")
+        console.log(elBox3)
+        console.log(elBox3.innerText)
+        console.log(elBox3.innerHTML)
+
+        // elBox3.innerText = "hello lee"
+        elBox3.innerHTML = "<b>hello lee</b>"
+    </script>
+    
+    
+</body>
+</html>
