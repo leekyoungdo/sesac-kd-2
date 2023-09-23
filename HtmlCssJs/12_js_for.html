@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js 반복문</title>
+</head>
+<body>
+
+    <script>
+        // // 배열과 for문을 함께
+        // // 비슷한 특징을 가진값을 모아둠
+
+        // // 초기값; 조건문; 증감문
+        // for (let i = 0; i < 10; i++) {
+        //     //0,1,2,3,4,5,6,7,8,9 => 10번
+        //     //명령문(반복하고 싶은 코드)
+        //     console.log(i,"안녕?");
+        // }
+        
+        // console.log("끝")
+
+        // // let i
+        // // for (let i = 0; i < 10; i++) {
+        // //     //명령문(반복하고 싶은 코드)
+        // // }
+
+        // // 중첩 for문
+        //     for (let i = 0; i < 5; i++) {
+        //         for(let j = 0; j < 3; j++)
+        //         console.log(`i: ${i}, j: ${j}`)
+        //     }
+        // // 초기값; 조건식; 증감문;
+
+        //     for (let i = 0; i < 10; i=i+2) {
+        //         console.log(`i: ${i}`)
+        //     }
+        //     // for (let i = 10; i >= 0; i--) {
+        //     //     console.log(`i: ${i}`)
+        //     // }
+        //     // for (let i = 0; i < 5; i=i-3) {
+        //     //     console.log(`i: ${i}`)
+        //     // }
+    </script>
+
+    <script>
+        // //for문 while문 차이
+        // //for문 : 반복할 횟수를 특정할 수 있을때
+        // //while : 반복할 횟수를 특정할 수 없을때
+        // for (let i = 0; i < 10; i++) {
+        //    console.log(i)
+            
+        // }
+
+        // let i = 0; //초기식
+        // while (i< 10) { //조건
+        //     // 조건이 true일 경우 실행할 명령문
+        //     console.log(i);
+        //     i++//증감문
+        //     while (j<10) {
+        //         console.log(i);
+        //         j++;
+        //     }
+        // }
+
+        // let number = number(prompt("양수"))
+        // while (number < 0 ) {//조건
+        //     number = number(prompt("양수"))
+            
+        // }
+
+        // while (true) {
+        //     let number = Number(prompt("양수"))
+        //     if(number > 0) break;// 반복문 강제로 종료 시킴
+        //     console.log("끝")
+        // }
+
+        // continue;
+        // for (let i = 0; i < 10; i++) {
+        //     if(i%2 == 0) continue
+        //     console.log(i);
+        //     // 이 지점으로 jump
+        // }
+
+
+        // while (condition) {
+        //     // 조건문
+        // }
+        
+        // do {
+        //     //명령문
+        // } while (condition) {
+            
+        // }
+
+
+        // let fruits = ["apple", "banana", "grape"]
+        // // console.log([fruits[0]])
+        // // console.log([fruits[0]])
+        // // console.log([fruits[0]])
+        // for (let i = 0;  i< fruits.length; i++) {
+        //     console.log(fruits[i])   
+        // }
+        // // for / of 문
+        // // let 변수이름 of 배열(위에서 선언해둔 배열)
+        // for (let fruit of fruits){
+        //     console.log(fruit);
+        // }
+        // // forEach함수 : 배열.forEach()
+        // // 베열의 원소를 순차적으로 탐색함.
+        // let fruits2 = ["apple", "banana", "grape"]
+        // fruits2.forEach((fruit, index, array)=>{
+        //     //첫번째 매개변수: 탐색된 원소
+        //     //두번째 매개변수: 인덱스
+        //     //세번째 매개변수: 배열(furits의 내용)
+        //     console.log(fruit)
+        //     console.log(index)
+        //     console.log(array)
+        // })
+
+        // fruits2.forEach(function(f, i, a){
+
+        // })
+        //         //함수 : (재사용 가능성이 있는)특정 기능을 묶어둠
+        // //class(객체)
+        // //메소드 -> 함수에 속함.
+        // //객체 내에 선언되어 있는 함수.
+
+        let numbers = []
+        for (let i = 1; i <= 10; i++) {
+            numbers.push(i)    
+            //배열(numbers)의 마지막에
+            //인자로 넘어간 값(i)을 추가
+        }
+        // console.log(numbers)
+        // //.pop(): 마지막 원소를 제거
+        // numbers.pop()
+        // console.log("pop", numbers)
+
+        // numbers.shift()
+        // console.log("shift", numbers)
+
+        // numbers.unshift(10)
+        // console.log("unshift", numbers)
+        
+        // console.log("includes",numbers.includes(5))
+
+        // console.log("indexof",numbers.indexOf(5))
+        // console.log("indexof",numbers.indexOf(1))
+
+        // numbers.reverse()
+        // console.log("reverse", numbers)
+
+        // console.log(["a","p","p","l","e"].join(""))
+
+        console.log("join", numbers.join(""))
+
+
+        // let str = "Happy Day~! ";
+
+        // console.log(str.length)
+        // console.log(str.toLocaleLowerCase())
+        // console.log(str.toLocaleUpperCase())
+        // console.log(str.indexOf('!'))
+        // console.log(str.slice(-10, -2))
+        // console.log(str.replace('p','a'))
+        // console.log(str.replaceAll('p','a'))
+        // console.log(str.repeat(3))
+        // console.log(str.trim())
+        // console.log(str.split(""))
+
+        let s = "hello"
+        console.log(s.split(""))
+
+
+    </script>
+    
+</body>
+</html>
