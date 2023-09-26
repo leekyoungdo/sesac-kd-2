@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <img class="men" src="../image/과일장수.jpg" alt="사과장수" width="500px" height="500px">
+    <br />
+    <button type="button" onclick="me()">아저씨</button>
+    <button type="button" onclick="ap()">사과</button>
+    <button type="button" onclick="ba()">바나나</button>
+    <button type="button" onclick="ga()">포도</button>
+    <button type="button" onclick="ma()">망고</button>
+
+    <script>
+        function ap(){
+        $(".men").attr("src", "../image/사과.jpg")}
+        function ba(){
+        $(".men").attr("src", "../image/바나나.jpg")}
+        function ga(){
+        $(".men").attr("src", "../image/포도.jpg")}
+        function ma(){
+        $(".men").attr("src", "../image/망고.jpg")}
+        function me(){
+        $(".men").attr("src", "../image/과일장수.jpg")}    
+        
+        
+    </script>
+</body>
+</html>
