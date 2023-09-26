@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기 실습</title>
+</head>
+<body>
+    <div>
+        <!-- type에 number를 사용해도됨 ex) input type =number -->
+        값1 : <input type="text" id="v1" > <br/>
+        값2 : <input type="text" id="v2"> <br/>
+        연산자 : <input type="text" id="op"> <br/>
+        결과 : <input type="text" id="res" readonly> <br />
+        <!-- 값을 바꾸지 못하게 하는 readonly (읽기만) -->
+    </div>
+    <div>
+        <button type="button" onclick="result()">계산하기</button>
+        <button type="button" onclick="res()">초기화</button>
+
+    </div>
+
+
+    <script>
+        // 클릭할떄 마다 값을 가져와야하기때문에 fuction을 먼저 주고시작
+        function result(){
+        let v1 = Number(document.getElementById("v1").value);
+        let v2 = Number(document.getElementById("v2").value);
+        let op = document.getElementById("op").value;
+        let res
+            if (op == "+") {
+                    res = v1+v2;
+                }else if (op == "-"){
+                    res = v1-v2;
+                }else if (op == "*"){
+                    res = v1*v2;
+                }else{
+                    res = v1/v2;
+                }
+            document.getElementById("res").value = res;
+            // =이 두번 존재할수 없으며 res 가 처리된후에 값이 입력되어야한다.
+        }
+// 스위치 문으로 작성 예
+        // switch(op){
+        //     case "+":
+        //         result = v1 + v2;
+        //         break;
+        //     case "-":
+        //         result = v1 - v2;
+        //         break;
+        //     case "*":
+        //         result = v1 * v2;
+        //         break;
+        //     case "/":
+        //         result = v1 / v2;
+        //         break;
+        // }
+
+        function res(){
+            document.getElementById("v1").value="";
+            document.getElementById("v2").value="";
+            document.getElementById("op").value="";
+            document.getElementById("res").value="";
+
+        }
+
+    </script>
+</body>
+</html>
