@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            transition-duration: 500ms;
+        }
+        .red{
+            background-color: red;
+        }
+        .orange{
+            background-color: orange;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .green{
+            background-color: green
+        }
+        .blue{
+            background-color: blue;
+        }
+        .navy{
+            background-color: navy;
+        }
+        .purple{
+            background-color: purple;
+        }
+    </style>
+    <div class="box red" id="box" onclick="change()" ></div>
+
+    <script>
+        function change() {
+        const colorBox = $("#box")
+
+        if (colorBox.hasClass("red")) {
+            colorBox.removeClass("red")
+            colorBox.addClass("orange")
+        }
+        else if (colorBox.hasClass("orange")) {
+                 colorBox.removeClass("orange")
+                 colorBox.addClass("yellow")   
+        }
+        else if (colorBox.hasClass("yellow")) {
+                 colorBox.removeClass("yellow")
+                 colorBox.addClass("green")   
+        }
+        else if (colorBox.hasClass("green")) {
+                 colorBox.removeClass("green")
+                 colorBox.addClass("blue")   
+        }
+        else if (colorBox.hasClass("blue")) {
+                 colorBox.removeClass("blue")
+                 colorBox.addClass("navy")   
+        }
+        else if (colorBox.hasClass("navy")) {
+                 colorBox.removeClass("navy")
+                 colorBox.addClass("purple")   
+        }
+        else if (colorBox.hasClass("purple")) {
+                 colorBox.removeClass("purple")
+                 colorBox.addClass("red")   
+        }
+        }
+    </script>
+</body>
+</html>
