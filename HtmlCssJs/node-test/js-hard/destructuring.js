@@ -81,6 +81,6 @@ function get(a, ...rest){
     console.log("rest", rest) // [20 , 30]
 }
 
-get(...values)
+get(...values);
 
 //...[10, 20, 30] => 10, 20, 30
