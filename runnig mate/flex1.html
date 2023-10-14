@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 중앙정렬</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            /* top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
+        }
+        .box{
+            color: white;
+            text-align: center;
+            width: 400px;
+            height: 100px
+            
+        }
+
+
+        .pink{
+            background-color: pink;
+        }
+        .orange{
+            background-color: orange;
+        }
+        .green{
+            background-color: green;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .purple{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box pink">box1 <br> box </div>
+        <div class="box orange">box2 <br> box </div>
+        <div class="box green">box3 <br> box </div>
+        <div class="box blue">box4 <br> box </div>
+        <div class="box purple">box5 <br> box </div>
+    </div>
+</body>
+</html>
