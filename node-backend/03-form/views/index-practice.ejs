@@ -63,7 +63,7 @@
     비밀번호 :<input type="password" name = "pw" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,10}$">
     <!-- <div id= "error-pw"></div> -->
     이름 :<input type="text" name="name" required>
-    전화번호 :<input type="phonenumver" pattern=""
+    전화번호 :<input type="text" name="phoneNumver" oninput="phoneAutoHyphen(this)"
      maxlength="13"
     placeholder="휴대 전화번호"required>
 
@@ -72,6 +72,13 @@
     <button type="submit">제출</button>
 </form>
 
+<script>
+    const phoneAutoHyphen = (target) => {
+    target.value = target.value
+    .replace(/[^0-9]/g, '')
+    .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");
+}
+</script>
 <!-- <script>
     function vaildCheckPw(el){
         const regexPw = /^([a-z0-9가*힣]){8,12}$/
@@ -84,8 +91,8 @@
             error.innerHTML = "소문자,숫자로 조합된 8~12자리로 입력"
             console.log("정규식 불일치")
         } 
-    } -->
-</script>
+    }
+</script> -->
 </body>
 </html>
 
