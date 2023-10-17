@@ -6,23 +6,20 @@
     <title>flex 중앙정렬</title>
     <style>
         .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .box{
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            /* top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); */
-        }
-        .box{
             color: white;
-            text-align: center;
             width: 400px;
             height: 100px
             
         }
-
 
         .pink{
             background-color: pink;
