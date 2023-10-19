@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>간단한 계산기</title>
+</head>
+<body>
+    <h1>간단한 계산기</h1>
+    첫번째 숫자를 입력해 주세요.<input type="text" id="num1" placeholder="숫자 1">
+    <br />
+    두번째 숫자를 입력해 주세요.<input type="text" id="num2" placeholder="숫자 2">
+    <br />
+    <button onclick="add()">덧셈 (+)</button>
+    <button onclick="subtract()">뺄셈 (-)</button>
+    <button onclick="multiply()">곱셈 (*)</button>
+    <button onclick="divide()">나눗셈 (/)</button>
+    <br />
+    <input type="text" id="result" placeholder="결과" readonly>
+    
+    <script>
+        function add() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result").value = num1 + num2;
+        }
+
+        function subtract() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result").value = num1 - num2;
+        }
+
+        function multiply() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result").value = num1 * num2;
+        }
+
+        function divide() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            if (num2 !== 0) {
+                document.getElementById("result").value = num1 / num2;
+            } else {
+                document.getElementById("result").value = "나눗셈 오류: 0으로 나눌 수 없습니다.";
+            }
+        }
+    </script>
+</body>
+</html>
