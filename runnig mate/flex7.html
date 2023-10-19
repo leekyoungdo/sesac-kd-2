@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <p>Css Navigation</p>
+    <nav class="main-menu">
+        <ul class="main-menu-list">
+            <li class="main-menu-item">
+                대메뉴 1
+                <ul class="sub-menu">
+                    <li>서브 메뉴 1</li>
+                    <li>서브 메뉴 2</li>
+                    <li>서브 메뉴 3</li>
+                </ul>
+            </li>
+            <li class="main-menu-item">
+                대메뉴 2
+                <ul class="sub-menu">
+                    <li>서브 메뉴 4</li>
+                    <li>서브 메뉴 5</li>
+                    <li>서브 메뉴 6</li>
+                </ul>
+            </li>
+            <li class="main-menu-item">
+                대메뉴 3
+                <ul class="sub-menu">
+                    <li>서브 메뉴 7</li>
+                    <li>서브 메뉴 8</li>
+                    <li>서브 메뉴 9</li>
+                </ul>
+            </li>
+            <li class="main-menu-item">
+                대메뉴 4
+                <ul class="sub-menu">
+                    <li>서브 메뉴 10</li>
+                    <li>서브 메뉴 11</li>
+                    <li>서브 메뉴 12</li>
+                </ul>
+            </li>
+            <li class="main-menu-item">
+                대메뉴 5
+                <ul class="sub-menu">
+                    <li>서브 메뉴 13</li>
+                    <li>서브 메뉴 14</li>
+                    <li>서브 메뉴 15</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <style>
+p{
+    background-color: skyblue;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 40px;
+
+}
+
+.main-menu {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+
+}
+
+.main-menu-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-menu-item {
+    position: relative;
+    padding: 10px;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    padding: 0;
+    flex-direction: column;
+}
+
+.main-menu-item:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-menu li {
+    padding: 10px;
+}
+
+
+
+    </style>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const mainMenuItems = document.querySelectorAll('.main-menu-item');
+
+    mainMenuItems.forEach(item => {
+        item.addEventListener('mouseenter', function () {
+            const subMenu = this.querySelector('.sub-menu');
+            subMenu.style.display = 'flex';
+        });
+
+        item.addEventListener('mouseleave', function () {
+            const subMenu = this.querySelector('.sub-menu');
+            subMenu.style.display = 'none';
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
