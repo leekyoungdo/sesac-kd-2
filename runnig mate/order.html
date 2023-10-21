@@ -9,26 +9,34 @@
     <h1>배송주소</h1>
     <hr />
     <form>
-            <div class="box1">
-            <input type="radio" name="" id="" >일반택배
-            <input type="radio" name="" id="" >해외배송
-            <input type="radio" name="" id="" >안심택배
+        <div class="main">
+        <div class="box">배송방법</div>
+            <div>
+                <input type="radio" name="" id="" >일반택배
+                <input type="radio" name="" id="" >해외배송
+                <input type="radio" name="" id="" >안심택배
+                <br>
+                <input type="radio" name="" id="" >편의점픽업
+                <input type="radio" name="" id="" >중고매장 픽업
+                <p>!편의점 픽업, 해외배송,업체배송의경우 총알 하루배송이 적용되지 않습니다.</p>
             </div>
-            <div class="box2">
-            <input type="radio" name="" id="" >편의점픽업
-            <input type="radio" name="" id="" >중고매장 픽업
-             </div>
-             <p>!편의점 픽업, 해외배송,업체배송의경우 총알 하루배송이 적용되지 않습니다.</p>
+    </form>
+        </div>
+    <hr />
 
-        <hr />
-
-        
-    </form> 
 
     <style>
-        .box1{
-            
+        .main{
+            display: flex;
+            flex-wrap: wrap;
         }
+        .box{
+            color: blue;
+            width: 70px;
+            height: 70px;
+            font-weight: bold;
+        }
+
     </style>
     
 </body>
