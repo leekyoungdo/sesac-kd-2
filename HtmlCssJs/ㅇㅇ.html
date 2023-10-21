@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+       width: 500px;
+       height: 500px;  
+    }
+    .red{
+        background-color: red;
+        position: relative;
+        bottom: 50px;
+        right: 30px;
+    }
+    .orange{
+        background-color: orange;
+        position: absolute;
+        left: 30px;
+        top: 100px;
+    }
+    .yellow{
+        background-color: yellow;
+        position: fixed;
+        left: 100px;
+        bottom: 100px;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="box red"></div>
+        <div class="box orange"></div>
+        <div class="box yellow"></div>
+    </div>
+    
+</body>
+</html>

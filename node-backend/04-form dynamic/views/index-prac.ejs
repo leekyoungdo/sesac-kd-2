@@ -62,6 +62,7 @@
             const hobby = []
 
             for (let input of form.hobby){
+                // input의 type이 radio이거나, checkbox인 경우 input의 속성으로 checked라는 게 존재
                 if(input.checked) hobby.push(input.value);
             }
 
