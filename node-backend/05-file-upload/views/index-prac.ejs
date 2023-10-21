@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파일 업로드 실습</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <h2>신상정보 업로드</h2>
+
+    <form action="/upload/detail" method="post" enctype="multipart/form-data">
+        <input type="text" name="id" placeholder="아이디" />
+        <br />
+        <input type="password" name="pw" placeholder="비밀번호" autocomplete="off" />
+        <br />
+        <input type="text" name="name" placeholder="이름" />
+        <br />
+        <input type="text" name="age" placeholder="나이" />
+        <br />
+        <input type="file" name="userfile" />
+        <br />
+        <button type="submit">업로드</button>
+
+        <br />
+        
+    
+</body>
+</html>
