@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 가입 하기</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form name="form-membership">
+        <fieldset>
+            <legend>회원 가입</legend>
+            <input type="text" name="userid" placeholder="아이디">
+            <input type="text" name="name" placeholder="이름">
+            <input type="password" name="pw" placeholder="비밀번호">
+            <button type="button" onclick="addMembership()">회원가입</button>
+        </fieldset>
+    </form>
+    <div>
+        <table border="1" cellspaicng="0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>아이디</th>
+                    <th>이름</th>
+                    <th>비밀번호</th>
+                    <th>수정</th>
+                    <th>삭제</th>
+                </tr>
+             </thead>
+             <tbody>
+                <% for(let i = 1; i < data.length; i++) { %>
+                    <tr>
+                        <td><%= data[i].id %></td>
+                        <td><%= data[i].userid%></td>
+                        <td><%= data[i].name%></td>
+                        <td><%= data[i].pw%></td>
+                        <td><button type="button" onclick="updateMembership('<%= data[i].id %>',this.parentElement.parentElement)">회원정보 수정</button></td>
+                        <td><button type="button" onclick="deleteMembership('<%= data[i].id %>',this.parentElement.parentElement)">회원 탈퇴</button></td>
+                    </tr>
+                <% } %>;
+             </tbody>
+
+        </table>
+    </div>
+    <script>
+        function addMembership () {
+            const form = document.forms["form-membership"]
+            const data = {
+                userid : form.userid.value,
+                name : form.name.value,
+                pw : form.pw.value
+            }
+            axios({
+                method : 'POST',
+                url : '/index',
+                data : data
+           }).then((res)=> {
+            const{
+                id,
+                userid,
+                name,
+                pw
+             } = res.data;
+
+                $("tbody").append(`<tr>
+                    <td>${id}</td>
+                    <td>${userid}</td>
+                    <td>${name}</td>
+                    <td>${pw}</td>
+                    <td><button type="button" onclick="updateMembership(${id}, this.parentElement.parentElement)">회원정보 수정</button></td>
+                    <td><button type="button" onclick="deleteMembership(${id}, this.parentElement.parentElement)">회원 탈퇴</button></td>
+                    </tr>`)
+           })
+        }
+    </script>
+
+</body>
+</html>
