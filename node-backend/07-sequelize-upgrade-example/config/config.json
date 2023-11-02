@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "user",
+    "password": "sba123$",
+    "database": "databaser_test",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}
