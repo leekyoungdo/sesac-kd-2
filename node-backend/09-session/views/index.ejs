@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">Codingon</div>
+        <div class="box">Menu1</div>
+        <div class="box">Menu2</div>
+        <div class="box"><a href="/login"><button id="btn">LOGIN</a></button></div>
+    </div>
+
+    <h1>실습. Session 연습</h1>
+    <div>여기는 Home입니다!</div>
+    <div id="msg">로그인을 아직 안하셨습니다.</div>
+
+    <style>
+        .container{
+            display: flex;
+            background-color: black;
+
+        }
+        .box{
+            color: white;
+            position: relative;
+            margin: 5px;
+            
+        }
+    </style>
+    
+    <script>
+        axios({
+            method: "get",
+            url: "/"
+        }).then((res) =>{
+            if(`<%=user%>`) {
+                console.log("res.user",`<%=user%>`)
+                $('#msg').html(`<%=user%>님 환영합니다.`)
+                $('#btn').html(`<button>LOGOUT</button>`)
+            }
+        })
+    </script>
+
+    
+</body>
+</html>
