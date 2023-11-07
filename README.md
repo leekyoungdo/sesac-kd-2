@@ -11,4 +11,5 @@ SeSAC 강의 코드 관리
 성별 : 남자
 
 
-- git branch test
+- git branch test(ex. 로그인 ui 완료)
+- git branch test(ex. 로그인 api)
