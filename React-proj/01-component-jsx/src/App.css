@@ -1,0 +1,27 @@
+/* BEM 네이밍 규칙 */
+/* .FuncComponent__test-css--active {} */
+
+.test-css {
+  background-color: yellow;
+  font-size: 30px;
+}
+.test-css1 {
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+.test-css2 {
+  text-align: center;
+}
+
+.Section__section {
+  margin-bottom: 20px;
+  border: 2px solid blue;
+}
+
+.Section__title {
+  color: red;
+}
+.test-css3 {
+  color: red;
+}
