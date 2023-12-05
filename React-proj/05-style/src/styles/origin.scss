@@ -1,0 +1,76 @@
+// :root {
+//     --color-main : red
+// }
+
+// div {
+//     color: var (var(--color-main));
+//     width: calc(100vw - 100px);
+// }
+
+$color-main: red;
+
+
+// style 코드 블록을 함수처럼 하나로 묶어두고,
+@mixin box-width($size) {
+    width: $size;
+    height: $size;
+}
+// 사용할떈 @include 키워드를 이용하여 사용
+.box1 {
+    @include box-width(100px);
+    background-color:blue
+}
+
+.box2 {
+    @include box-width(200px);
+    background-color: green;
+}
+
+
+// .scss-parents > ul {} 기존방식
+.scss-parents {
+    ul{
+        background-color: black;
+        color: white;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.scss-parents {
+    color: $color-main;
+    width: 400vw -300px;
+    background-color: aqua;
+}
+// 네모네모
+.origin-sass {
+    display: flex;
+    .box{
+        @include box-width(100px);
+
+        &.red {
+            background-color: red;
+        }
+        &.orange {
+            background-color: orange;
+        }
+        &.yellow {
+            background-color: yellow;
+        }
+
+    }
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.btn-primary {
+    @extend .btn;
+    background-color: aqua;
+}
