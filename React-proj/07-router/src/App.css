@@ -15,6 +15,7 @@
     width: 100%;
     background-color: rgb(207, 155, 255);
     padding: 0 20px;
+    top: 0
   }
   
   .Header > nav {
@@ -23,4 +24,8 @@
   
   .Header > nav > div {
     margin-left: 15px;
+  }
+
+  main {
+    margin-top:  var(--height-header);
   }
